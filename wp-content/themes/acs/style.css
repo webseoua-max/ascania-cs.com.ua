@@ -29,24 +29,34 @@ Template: hello-elementor
   text-decoration: none;
   font-weight: 600;
 }
-.acs-phone-item a.acs-num:hover { color: #e74c3c; }
-.acs-icon-tg, .acs-icon-vb {
+.acs-phone-item a.acs-num:hover {
+  color: #e74c3c;
+}
+.acs-icon-tg,
+.acs-icon-vb {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   flex-shrink: 0;
   text-decoration: none;
 }
-.acs-icon-tg { background: #29a8e9; }
-.acs-icon-vb { background: #7b519d; }
-.acs-icon-tg svg, .acs-icon-vb svg {
-  width: 11px;
-  height: 11px;
-  fill: #ffffff;
+.acs-icon-tg {
+  background: #29a8e9;
+}
+.acs-icon-vb {
+  background: #7b519d;
+}
+.acs-icon-tg i,
+.acs-icon-vb i {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1;
 }
 @media (max-width: 768px) {
-  .acs-phones-bar { display: none; }
+  .acs-phones-bar {
+    display: none;
+  }
 }
