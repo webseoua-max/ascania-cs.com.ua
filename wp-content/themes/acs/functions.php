@@ -12,6 +12,7 @@ function acs_enqueue_styles() {
         array('parent-style')
     );
 		wp_enqueue_style('acs-global', get_stylesheet_directory_uri() . '/assets/css/global.css' );
+    wp_enqueue_style('font-awesome-brands', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 }
 function acs_scripts() {
 	wp_enqueue_script('acs-custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery'), false, true);
@@ -47,30 +48,30 @@ add_action('wp_footer', function() {
             <span>Автомийка:</span>
             <a class="acs-num" href="tel:+380985670202">+38 098 567 0202</a>
             <a class="acs-icon-tg" href="https://t.me/+380985670202" target="_blank" title="Написати в Telegram">
-              <i class="fab fa-telegram-plane"></i>
+              <i class="fa-brands fa-telegram"></i>
             </a>
             <a class="acs-icon-vb" href="viber://chat?number=%2B380985670202" title="Написати у Viber">
-              <i class="fab fa-viber"></i>
+              <i class="fa-brands fa-viber"></i>
             </a>
           </div>
           <div class="acs-phone-item">
             <span>Кузовний ремонт:</span>
             <a class="acs-num" href="tel:+380985680202">+38 098 568 0202</a>
             <a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Написати в Telegram">
-              <i class="fab fa-telegram-plane"></i>
+              <i class="fa-brands fa-telegram"></i>
             </a>
             <a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Написати у Viber">
-              <i class="fab fa-viber"></i>
+              <i class="fa-brands fa-viber"></i>
             </a>
           </div>
           <div class="acs-phone-item">
             <span>Підбір запчастин:</span>
             <a class="acs-num" href="tel:+380672464304">+38 067 246 4304</a>
             <a class="acs-icon-tg" href="https://t.me/+380672464304" target="_blank" title="Написати в Telegram">
-              <i class="fab fa-telegram-plane"></i>
+              <i class="fa-brands fa-telegram"></i>
             </a>
             <a class="acs-icon-vb" href="viber://chat?number=%2B380672464304" title="Написати у Viber">
-              <i class="fab fa-viber"></i>
+              <i class="fa-brands fa-viber"></i>
             </a>
           </div>
         `;

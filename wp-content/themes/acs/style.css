@@ -51,8 +51,8 @@ Template: hello-elementor
 }
 .acs-icon-tg i,
 .acs-icon-vb i {
-  color: #ffffff;
-  font-size: 13px;
+  color: #ffffff !important;
+  font-size: 13px !important;
   line-height: 1;
 }
 @media (max-width: 768px) {
