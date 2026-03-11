@@ -1,0 +1,114 @@
+/*
+root {
+--e-global-color-primary: #F02801;
+--e-global-color-secondary: #014D8E;
+--e-global-color-text: #595959;
+--e-global-color-accent: #1E1E1E;
+--e-global-color-37b4f57: #F33700;
+--e-global-color-87879c4: #929292;
+--e-global-color-6cd6fae: #F4F4F4;
+--e-global-color-38f2ebd: #FFFFFF;
+--e-global-typography-primary-font-family: "Montserrat";
+--e-global-typography-primary-font-weight: 600;
+--e-global-typography-secondary-font-family: "Montserrat";
+--e-global-typography-secondary-font-weight: 400;
+--e-global-typography-text-font-family: "Montserrat";
+--e-global-typography-text-font-weight: 400;
+--e-global-typography-accent-font-family: "Montserrat";
+--e-global-typography-accent-font-weight: 500;
+font-family: "Montserrat", Sans-serif;
+}
+*/
+/*RESET ****************************************************************************************/
+* {
+padding: 0px;
+margin: 0px;
+border: none;
+}
+*,
+*::before,
+*::after {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/*MAIN ****************************************************************************************/
+* {
+scrollbar-width: thin;
+scrollbar-color: #F02801 #444746;
+}
+body {
+overflow-x: hidden;
+font-variant-numeric: lining-nums proportional-nums;
+}
+.hidden {
+opacity: 0;
+display: none;
+}
+.wpcf7-not-valid-tip,
+.hide {
+display: none;
+} 
+
+/*FORM ****************************************************************************************/
+.wpcf7-spinner,
+.wpcf7-response-output,
+.wpcf7-not-valid-tip {
+display: none;
+}
+form p {
+margin-bottom: 0px;	
+}
+form input[type=date], form input[type=email], form input[type=number], form input[type=password], form input[type=tel], form input[type=text], form input[type=url], form select {
+border: 1px solid #cecece;
+border-radius: 0px;
+width: 100%;
+background-color: #fff;
+margin-bottom: 15px;
+position: relative;
+line-height: 35px	
+}
+form select {
+position: relative;	
+border: 1px solid #cecece;
+width: 100%;
+margin-bottom: 10px;
+}
+form input[type=date]:focus-visible, form input[type=email]:focus-visible, form input[type=number]:focus-visible, form input[type=password]:focus-visible, form input[type=search]:focus-visible, form input[type=tel]:focus-visible, form input[type=text]:focus-visible, form input[type=url]:focus-visible, form select:focus-visible, form textarea:focus-visible {
+outline: 1px;
+}
+form textarea {
+border: 1px solid #cecece;
+background-color: #fff;
+border-radius: 0px;
+min-height: 130px;
+height: 130px;
+width: 100%;
+margin-bottom: 10px;
+}
+form input[type=submit] {
+background-color: #fff!important;
+border-width: 0px 2px 0px 0px;
+border-color: var(--e-global-color-primary);
+border-radius: 0px;
+padding: 20px 30px 20px 30px!important;
+color: var(--e-global-color-accent)!important;
+font-weight: 700;
+}
+form input[type=submit]:hover {
+background-color: var(--e-global-color-primary)!important;
+color: #fff!important;
+}
+form p.accept {
+font-size: 12px;
+font-weight: 400;
+color: var(--e-global-color-accent);
+line-height: 1.2;
+margin-bottom: 15px;
+}
+.elementor-location-popup form p.accept {
+color: #fff;	
+}
+.wpcf7-not-valid {
+border-color: #cf2e2e!important;
+}
