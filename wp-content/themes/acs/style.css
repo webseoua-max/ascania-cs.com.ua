@@ -49,11 +49,13 @@ Template: hello-elementor
 .acs-icon-vb {
   background: #7b519d;
 }
-.acs-icon-tg i,
-.acs-icon-vb i {
+.acs-phones-bar .acs-icon-tg i.fa-brands,
+.acs-phones-bar .acs-icon-vb i.fa-brands,
+.acs-phones-bar a.acs-icon-tg i,
+.acs-phones-bar a.acs-icon-vb i {
   color: #ffffff !important;
   font-size: 13px !important;
-  line-height: 1;
+  line-height: 1 !important;
 }
 @media (max-width: 768px) {
   .acs-phones-bar {
