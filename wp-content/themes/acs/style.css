@@ -9,3 +9,48 @@ This is the child theme for Hello Elementor theme, generated with Generate Child
 
 (optional values you can add: Theme URI, Author URI, License, License URI, Tags, Text Domain)
 */
+
+/* === Телефони у верхньому рядку === */
+.acs-phones-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.acs-phone-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.acs-phone-item span {
+  color: #cccccc;
+}
+.acs-phone-item a.acs-num {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.acs-phone-item a.acs-num:hover { color: #e74c3c; }
+.acs-icon-tg, .acs-icon-vb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.acs-icon-tg { background: #29a8e9; }
+.acs-icon-vb { background: #7b519d; }
+.acs-icon-tg svg, .acs-icon-vb svg {
+  width: 11px;
+  height: 11px;
+  fill: #ffffff;
+}
+@media (max-width: 768px) {
+  .acs-phones-bar { display: none; }
+}
