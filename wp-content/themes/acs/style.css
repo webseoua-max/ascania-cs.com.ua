@@ -22,10 +22,10 @@ Template: hello-elementor
   white-space: nowrap;
 }
 .acs-phone-item span {
-  color: #cccccc;
+  color: #000000;
 }
 .acs-phone-item a.acs-num {
-  color: #ffffff;
+  color: #e74c3c;
   text-decoration: none;
   font-weight: 600;
 }
