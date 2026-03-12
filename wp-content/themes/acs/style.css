@@ -62,3 +62,35 @@ Template: hello-elementor
     display: none;
   }
 }
+
+/* === Блок СТО з двома номерами === */
+.elementor-element-acd0e91 .elementor-icon-box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+.acs-sto-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.acs-sto-phones {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.acs-sto-phones a {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e74c3c;
+  text-decoration: none;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.acs-sto-phones a:hover {
+  color: #ff6b5b;
+}
