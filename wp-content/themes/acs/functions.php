@@ -10,7 +10,7 @@ function acs_enqueue_styles() {
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style'),
-        '1.1'
+        '1.2'
     );
 	wp_enqueue_style('acs-global', get_stylesheet_directory_uri() . '/assets/css/global.css' );
 }

@@ -64,33 +64,36 @@ Template: hello-elementor
 }
 
 /* === Блок СТО з двома номерами === */
+.elementor-element-acd0e91 .elementor-icon-box-wrapper {
+  align-items: center !important;
+}
 .elementor-element-acd0e91 .elementor-icon-box-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 2px !important;
 }
 .acs-sto-title {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
-  color: #ffffff;
+  color: #ffffff !important;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 .acs-sto-phones {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
 }
 .acs-sto-phones a {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  color: #e74c3c;
-  text-decoration: none;
-  line-height: 1.2;
+  color: #e74c3c !important;
+  text-decoration: none !important;
+  line-height: 1.3;
   white-space: nowrap;
 }
 .acs-sto-phones a:hover {
-  color: #ff6b5b;
+  color: #ff6b5b !important;
 }
