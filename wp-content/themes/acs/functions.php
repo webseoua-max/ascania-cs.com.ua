@@ -9,7 +9,8 @@ function acs_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
-        array('parent-style')
+        array('parent-style'),
+        '1.1'
     );
 	wp_enqueue_style('acs-global', get_stylesheet_directory_uri() . '/assets/css/global.css' );
 }
@@ -32,7 +33,6 @@ function alter_login_headerurl() {
 	return '/'; 
 }
 add_action('login_headerurl','alter_login_headerurl');
-
 // === Телефони у верхньому рядку хедера ===
 add_action('wp_footer', function() {
     // Telegram: літак
@@ -44,10 +44,8 @@ add_action('wp_footer', function() {
     document.addEventListener('DOMContentLoaded', function() {
         var inner = document.querySelector('.elementor-element-8027c60 .e-con-inner');
         if (!inner) return;
-
         var tgSvg = <?php echo json_encode($tg); ?>;
         var vbSvg = <?php echo json_encode($vb); ?>;
-
         function makeItem(label, phone, phoneFormatted, tgHref, vbHref) {
             return '<div class="acs-phone-item">' +
                 '<span>' + label + ':</span>' +
@@ -56,14 +54,12 @@ add_action('wp_footer', function() {
                 '<a class="acs-icon-vb" href="' + vbHref + '" title="Viber">' + vbSvg + '</a>' +
             '</div>';
         }
-
         var phones = document.createElement('div');
         phones.className = 'acs-phones-bar';
         phones.innerHTML =
             makeItem('Автомийка', '+380985670202', '+38 098 567 0202', 'https://t.me/+380985670202', 'viber://chat?number=%2B380985670202') +
             makeItem('Кузовний ремонт', '+380985680202', '+38 098 568 0202', 'https://t.me/+380985680202', 'viber://chat?number=%2B380985680202') +
             makeItem('Підбір запчастин', '+380672464304', '+38 067 246 4304', 'https://t.me/+380672464304', 'viber://chat?number=%2B380672464304');
-
         inner.insertBefore(phones, inner.children[1]);
     });
     </script>
