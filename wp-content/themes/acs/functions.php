@@ -40,6 +40,14 @@ add_action('wp_footer', function() {
     // Viber: телефонна трубка
     $vb = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13"><path fill="#fff" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>';
     ?>
+    <style>
+    .acs-dark-icons {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 4px;
+    }
+    </style>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // === Телефони у верхньому рядку ===
@@ -76,6 +84,17 @@ add_action('wp_footer', function() {
                         '<a href="tel:+380985680202">+380 98 568 0202</a>' +
                     '</div>';
             }
+        }
+
+        // === Іконки TG/Viber у темному блоку хедера (головна сторінка) ===
+        var darkBox = document.querySelector('.elementor-element-ac75887 .elementor-icon-box-content');
+        if (darkBox) {
+            var darkIcons = document.createElement('div');
+            darkIcons.className = 'acs-dark-icons';
+            darkIcons.innerHTML =
+                '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>';
+            darkBox.appendChild(darkIcons);
         }
     });
     </script>
