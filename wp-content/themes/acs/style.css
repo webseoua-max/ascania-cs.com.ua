@@ -2,7 +2,7 @@
 Theme Name: ACS
 Author: Seo-admin
 Description: Child Theme
-Version: 1.9
+Version: 2.1
 Template: hello-elementor
 */
 
@@ -61,7 +61,7 @@ Template: hello-elementor
   padding: 10px 0 !important;
 }
 .elementor-element-c20d916 .elementor-item {
-  color: #cccccc !important;
+  color: #ffffff !important;
   padding: 10px 20px !important;
   display: block !important;
   font-size: 14px !important;
