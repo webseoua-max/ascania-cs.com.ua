@@ -10,7 +10,7 @@ function acs_enqueue_styles() {
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style'),
-        '1.2'
+        '1.3'
     );
 	wp_enqueue_style('acs-global', get_stylesheet_directory_uri() . '/assets/css/global.css' );
 }
@@ -40,43 +40,6 @@ add_action('wp_footer', function() {
     // Viber: телефонна трубка
     $vb = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13"><path fill="#fff" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>';
     ?>
-    <style>
-    /* Верхній рядок хедера — трохи світліший темний фон */
-    .elementor-element-8027c60 {
-        background-color: #3a3a3a !important;
-    }
-    /* Текстові написи — білі */
-    .elementor-element-8027c60 .acs-phone-item span,
-    .elementor-element-8027c60 .elementor-icon-list-text {
-        color: #fff !important;
-    }
-    /* Соц іконки — червоні постійно */
-    .elementor-element-8027c60 .elementor-social-icon,
-    .elementor-element-8027c60 .elementor-social-icon:hover {
-        background-color: #e63024 !important;
-        color: #fff !important;
-    }
-    .acs-dark-icons {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-top: 4px;
-    }
-    .acs-sto-row {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-bottom: 2px;
-    }
-    .acs-sto-num {
-        color: #fff;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 500;
-        white-space: nowrap;
-    }
-    .acs-sto-num:hover { color: #e74c3c; }
-    </style>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // === Телефони у верхньому рядку ===
