@@ -2,7 +2,7 @@
 Theme Name: ACS
 Author: Seo-admin
 Description: Child Theme
-Version: 1.3
+Version: 1.4
 Template: hello-elementor
 */
 
@@ -109,7 +109,34 @@ Template: hello-elementor
   margin-top: 4px;
 }
 
-/* === Картинки у блоку послуг — однакова висота === */
+/* === Футер: телефон і соц мережі === */
+.acs-footer-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.elementor-element-12a3208 .acs-sto-num {
+  color: #e74c3c !important;
+  font-size: 13px;
+}
+.acs-footer-soc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e63024;
+  color: #fff !important;
+  text-decoration: none;
+  margin-right: 6px;
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+.acs-footer-soc:hover { opacity: 0.8; }
+.acs-footer-soc i { color: #fff !important; }
 .elementor-element-838e19c img {
   height: 250px !important;
   width: 100% !important;

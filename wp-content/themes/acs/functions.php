@@ -10,7 +10,7 @@ function acs_enqueue_styles() {
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style'),
-        '1.3'
+        '1.4'
     );
 	wp_enqueue_style('acs-global', get_stylesheet_directory_uri() . '/assets/css/global.css' );
 }
@@ -62,6 +62,40 @@ add_action('wp_footer', function() {
                 makeItem('Кузовний ремонт', '+380985680202', '+38 098 568 0202', 'https://t.me/+380985680202', 'viber://chat?number=%2B380985680202') +
                 makeItem('Підбір запчастин', '+380672464304', '+38 067 246 4304', 'https://t.me/+380672464304', 'viber://chat?number=%2B380672464304');
             inner.insertBefore(phones, inner.children[1]);
+        }
+
+        // === Футер: блок телефону — TG/Viber навпроти кожного номера ===
+        var footerPhone = document.querySelector('.elementor-element-12a3208 .elementor-icon-box-content');
+        if (footerPhone) {
+            var desc = footerPhone.querySelector('.elementor-icon-box-description');
+            if (desc) {
+                desc.innerHTML =
+                    '<div class="acs-sto-row">' +
+                        '<span class="acs-footer-label">СТО</span>' +
+                    '</div>' +
+                    '<div class="acs-sto-row">' +
+                        '<a class="acs-sto-num" href="tel:+380677759970">+380 67 775 9970</a>' +
+                        '<a class="acs-icon-tg" href="https://t.me/+380677759970" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380677759970" title="Viber">' + vbSvg + '</a>' +
+                    '</div>' +
+                    '<div class="acs-sto-row">' +
+                        '<a class="acs-sto-num" href="tel:+380985680202">+380 98 568 0202</a>' +
+                        '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>' +
+                    '</div>';
+            }
+        }
+
+        // === Футер: соц мережі — додаємо Instagram і TikTok ===
+        var footerSoc = document.querySelector('.elementor-element-242f19c .elementor-icon-box-content');
+        if (footerSoc) {
+            var socDesc = footerSoc.querySelector('.elementor-icon-box-description');
+            if (socDesc) {
+                socDesc.innerHTML =
+                    '<a class="acs-footer-soc" href="https://www.facebook.com/ascaniacarservice" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>' +
+                    '<a class="acs-footer-soc" href="https://www.instagram.com/acs_brovary" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>' +
+                    '<a class="acs-footer-soc" href="https://www.tiktok.com/@acs_brovary" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>';
+            }
         }
 
         // === Іконки TG/Viber у нижньому блоку "Зв'язок з нами" ===
