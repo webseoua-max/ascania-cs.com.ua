@@ -2,7 +2,7 @@
 Theme Name: ACS
 Author: Seo-admin
 Description: Child Theme
-Version: 1.7
+Version: 1.8
 Template: hello-elementor
 */
 
@@ -153,9 +153,16 @@ Template: hello-elementor
 }
 
 /* === Кнопка "Докладніше" на одному рівні в картках послуг === */
+.elementor-element-fe38e97 {
+  height: 100% !important;
+}
 .elementor-element-a1e3ccd {
+  flex-grow: 1 !important;
   justify-content: space-between !important;
 }
 .elementor-element-a1e3ccd .elementor-element-6923b4a {
   flex-grow: 1 !important;
+}
+.elementor-element-6934fd2 .swiper-slide {
+  height: auto !important;
 }
