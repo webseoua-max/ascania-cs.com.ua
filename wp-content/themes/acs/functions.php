@@ -72,7 +72,18 @@ add_action('wp_footer', function() {
             inner.insertBefore(phones, inner.children[1]);
         }
 
-        // === Блок СТО з двома номерами ===
+        // === Іконки TG/Viber у нижньому блоку "Зв'язок з нами" ===
+        var darkBox = document.querySelector('.elementor-element-ac75887 .elementor-icon-box-content');
+        if (darkBox) {
+            var darkIcons = document.createElement('div');
+            darkIcons.className = 'acs-dark-icons';
+            darkIcons.innerHTML =
+                '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>';
+            darkBox.appendChild(darkIcons);
+        }
+
+        // === Блок СТО з двома номерами + іконки TG/Viber ===
         var iconBox = document.querySelector('.elementor-element-acd0e91 .elementor-icon-box-wrapper');
         if (iconBox) {
             var content = iconBox.querySelector('.elementor-icon-box-content');
@@ -82,19 +93,12 @@ add_action('wp_footer', function() {
                     '<div class="acs-sto-phones">' +
                         '<a href="tel:+380677759970">+380 67 775 9970</a>' +
                         '<a href="tel:+380985680202">+380 98 568 0202</a>' +
+                    '</div>' +
+                    '<div class="acs-dark-icons">' +
+                        '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>' +
                     '</div>';
             }
-        }
-
-        // === Іконки TG/Viber у темному блоку хедера (головна сторінка) ===
-        var darkBox = document.querySelector('.elementor-element-ac75887 .elementor-icon-box-content');
-        if (darkBox) {
-            var darkIcons = document.createElement('div');
-            darkIcons.className = 'acs-dark-icons';
-            darkIcons.innerHTML =
-                '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
-                '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>';
-            darkBox.appendChild(darkIcons);
         }
     });
     </script>
