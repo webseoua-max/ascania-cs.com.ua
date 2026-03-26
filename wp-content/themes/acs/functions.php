@@ -10,7 +10,7 @@ function acs_enqueue_styles() {
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style'),
-        '1.4'
+        '1.7'
     );
 	wp_enqueue_style('acs-global', get_stylesheet_directory_uri() . '/assets/css/global.css' );
 }
@@ -42,6 +42,19 @@ add_action('wp_footer', function() {
     ?>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // === Sticky тільки темний верхній рядок ===
+        var topBar = document.querySelector('.elementor-element-8027c60');
+        if (topBar) {
+            var barHeight = topBar.offsetHeight;
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > barHeight) {
+                    topBar.classList.add('acs-topbar-fixed');
+                } else {
+                    topBar.classList.remove('acs-topbar-fixed');
+                }
+            });
+        }
+
         // === Телефони у верхньому рядку ===
         var inner = document.querySelector('.elementor-element-8027c60 .e-con-inner');
         if (inner) {
