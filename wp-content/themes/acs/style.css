@@ -2,7 +2,7 @@
 Theme Name: ACS
 Author: Seo-admin
 Description: Child Theme
-Version: 1.8
+Version: 1.9
 Template: hello-elementor
 */
 
@@ -47,6 +47,30 @@ Template: hello-elementor
 .acs-icon-vb { background: #7b519d; }
 @media (max-width: 768px) {
   .acs-phones-bar { display: none; }
+}
+
+/* === Лівий блок меню послуг — sticky + стиль === */
+.elementor-element-c20d916 {
+  position: sticky !important;
+  top: 55px !important;
+}
+.elementor-element-c20d916 .elementor-widget-container {
+  background: #1e1e1e !important;
+  border-left: 4px solid #e63024 !important;
+  border-radius: 4px !important;
+  padding: 10px 0 !important;
+}
+.elementor-element-c20d916 .elementor-item {
+  color: #cccccc !important;
+  padding: 10px 20px !important;
+  display: block !important;
+  font-size: 14px !important;
+  transition: color 0.2s, background 0.2s !important;
+}
+.elementor-element-c20d916 .elementor-item:hover,
+.elementor-element-c20d916 .elementor-item-active {
+  color: #e63024 !important;
+  background: rgba(230, 48, 36, 0.08) !important;
 }
 
 /* === Sticky тільки темний верхній рядок === */
