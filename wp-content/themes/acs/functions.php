@@ -47,6 +47,20 @@ add_action('wp_footer', function() {
         gap: 6px;
         margin-top: 4px;
     }
+    .acs-sto-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 2px;
+    }
+    .acs-sto-num {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    .acs-sto-num:hover { color: #e74c3c; }
     </style>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -83,18 +97,20 @@ add_action('wp_footer', function() {
             darkBox.appendChild(darkIcons);
         }
 
-        // === Блок СТО з двома номерами + іконки TG/Viber ===
+        // === Блок СТО з двома номерами + іконки TG/Viber навпроти кожного ===
         var iconBox = document.querySelector('.elementor-element-acd0e91 .elementor-icon-box-wrapper');
         if (iconBox) {
             var content = iconBox.querySelector('.elementor-icon-box-content');
             if (content) {
                 content.innerHTML =
                     '<div class="acs-sto-title">СТО</div>' +
-                    '<div class="acs-sto-phones">' +
-                        '<a href="tel:+380677759970">+380 67 775 9970</a>' +
-                        '<a href="tel:+380985680202">+380 98 568 0202</a>' +
+                    '<div class="acs-sto-row">' +
+                        '<a class="acs-sto-num" href="tel:+380677759970">+380 67 775 9970</a>' +
+                        '<a class="acs-icon-tg" href="https://t.me/+380677759970" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380677759970" title="Viber">' + vbSvg + '</a>' +
                     '</div>' +
-                    '<div class="acs-dark-icons">' +
+                    '<div class="acs-sto-row">' +
+                        '<a class="acs-sto-num" href="tel:+380985680202">+380 98 568 0202</a>' +
                         '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
                         '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>' +
                     '</div>';
