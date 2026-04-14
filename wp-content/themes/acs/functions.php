@@ -72,7 +72,7 @@ add_action('wp_footer', function() {
             phones.className = 'acs-phones-bar';
             phones.innerHTML =
                 makeItem('Автомийка', '+380985670202', '+38 098 567 0202', 'https://t.me/+380985670202', 'viber://chat?number=%2B380985670202') +
-                makeItem('Кузовний ремонт', '+380985680202', '+38 098 568 0202', 'https://t.me/+380985680202', 'viber://chat?number=%2B380985680202') +
+                makeItem('Кузовний ремонт', '+380985660202', '+38 098 566 02 02', 'https://t.me/+380985660202', 'viber://chat?number=%2B380985660202') +
                 makeItem('Підбір запчастин', '+380672464304', '+38 067 246 4304', 'https://t.me/+380672464304', 'viber://chat?number=%2B380672464304');
             inner.insertBefore(phones, inner.children[1]);
         }
@@ -92,9 +92,9 @@ add_action('wp_footer', function() {
                         '<a class="acs-icon-vb" href="viber://chat?number=%2B380677759970" title="Viber">' + vbSvg + '</a>' +
                     '</div>' +
                     '<div class="acs-sto-row">' +
-                        '<a class="acs-sto-num" href="tel:+380985680202">+380 98 568 0202</a>' +
-                        '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
-                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>' +
+                        '<a class="acs-sto-num" href="tel:+380985660202">+380 98 566 02 02</a>' +
+                        '<a class="acs-icon-tg" href="https://t.me/+380985660202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380985660202" title="Viber">' + vbSvg + '</a>' +
                     '</div>';
             }
         }
@@ -117,8 +117,8 @@ add_action('wp_footer', function() {
             var darkIcons = document.createElement('div');
             darkIcons.className = 'acs-dark-icons';
             darkIcons.innerHTML =
-                '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
-                '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>';
+                '<a class="acs-icon-tg" href="https://t.me/+380985660202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                '<a class="acs-icon-vb" href="viber://chat?number=%2B380985660202" title="Viber">' + vbSvg + '</a>';
             darkBox.appendChild(darkIcons);
         }
 
@@ -135,9 +135,9 @@ add_action('wp_footer', function() {
                         '<a class="acs-icon-vb" href="viber://chat?number=%2B380677759970" title="Viber">' + vbSvg + '</a>' +
                     '</div>' +
                     '<div class="acs-sto-row">' +
-                        '<a class="acs-sto-num" href="tel:+380985680202">+380 98 568 0202</a>' +
-                        '<a class="acs-icon-tg" href="https://t.me/+380985680202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
-                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380985680202" title="Viber">' + vbSvg + '</a>' +
+                        '<a class="acs-sto-num" href="tel:+380985660202">+380 98 566 02 02</a>' +
+                        '<a class="acs-icon-tg" href="https://t.me/+380985660202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
+                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380985660202" title="Viber">' + vbSvg + '</a>' +
                     '</div>';
             }
         }
