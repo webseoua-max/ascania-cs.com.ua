@@ -1,4 +1,17 @@
 <?php
+
+// 301 redirect uppercase URLs to lowercase
+add_action("template_redirect", function() {
+    $uri = $_SERVER["REQUEST_URI"];
+    $path = parse_url($uri, PHP_URL_PATH);
+    $lower = strtolower($path);
+    if ($path !== $lower && !is_admin()) {
+        $query = parse_url($uri, PHP_URL_QUERY);
+        $redirect = $lower . ($query ? "?" . $query : "");
+        wp_redirect($redirect, 301);
+        exit;
+    }
+});
 /*
  * This is the child theme for Hello Elementor theme, generated with Generate Child Theme plugin by catchthemes.
  *
@@ -145,3 +158,21 @@ add_action('wp_footer', function() {
     </script>
     <?php
 });
+
+
+// Yoast Breadcrumbs — виводити приховано, JS перемістить
+add_action('wp_body_open', function() {
+    if (is_front_page()) return;
+    if (function_exists('yoast_breadcrumb')) {
+        echo '<div id="acs-breadcrumbs-source" style="display:none">';
+        yoast_breadcrumb('<nav aria-label="Breadcrumb">', '</nav>');
+        echo '</div>';
+    }
+});
+
+// Preload hero background image
+add_action('wp_head', function() {
+    if (is_front_page()) return;
+    // Hero background на сторінках послуг
+    echo '<link rel="preload" as="image" href="/wp-content/uploads/h1_img-5.jpg">' . "\n";
+}, 1);

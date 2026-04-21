@@ -112,3 +112,23 @@ color: #fff;
 .wpcf7-not-valid {
 border-color: #cf2e2e!important;
 }
+/* Breadcrumbs */
+.acs-breadcrumbs {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+    color: #929292;
+}
+.acs-breadcrumbs a {
+    color: #014D8E;
+    text-decoration: none;
+}
+.acs-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+.acs-breadcrumbs .breadcrumb_last {
+    color: #595959;
+    pointer-events: none;
+}
