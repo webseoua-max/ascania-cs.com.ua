@@ -125,38 +125,6 @@ add_action('wp_footer', function() {
             }
         }
 
-        // === RU Footer: телефони з TG/Viber ===
-        var footerPhoneRu = document.querySelector('.elementor-element-6547d4e .elementor-icon-box-content');
-        if (footerPhoneRu) {
-            var descRu = footerPhoneRu.querySelector('.elementor-icon-box-description');
-            if (descRu) {
-                descRu.innerHTML =
-                    '<div class="acs-sto-row">' +
-                        '<span class="acs-footer-label">СТО</span>' +
-                    '</div>' +
-                    '<div class="acs-sto-row">' +
-                        '<a class="acs-sto-num" href="tel:+380677759970">+380 67 775 9970</a>' +
-                        '<a class="acs-icon-tg" href="https://t.me/+380677759970" target="_blank" title="Telegram">' + tgSvg + '</a>' +
-                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380677759970" title="Viber">' + vbSvg + '</a>' +
-                    '</div>' +
-                    '<div class="acs-sto-row">' +
-                        '<a class="acs-sto-num" href="tel:+380985660202">+380 98 566 02 02</a>' +
-                        '<a class="acs-icon-tg" href="https://t.me/+380985660202" target="_blank" title="Telegram">' + tgSvg + '</a>' +
-                        '<a class="acs-icon-vb" href="viber://chat?number=%2B380985660202" title="Viber">' + vbSvg + '</a>' +
-                    '</div>';
-            }
-        }
-        // === RU Footer: соц мережі ===
-        var footerSocRu = document.querySelector('.elementor-element-37f65a4 .elementor-icon-box-content');
-        if (footerSocRu) {
-            var socDescRu = footerSocRu.querySelector('.elementor-icon-box-description');
-            if (socDescRu) {
-                socDescRu.innerHTML =
-                    '<a class="acs-footer-soc" href="https://www.facebook.com/ascaniacarservice" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>' +
-                    '<a class="acs-footer-soc" href="https://www.instagram.com/acs_brovary" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>' +
-                    '<a class="acs-footer-soc" href="https://www.tiktok.com/@acs_brovary" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>';
-            }
-        }
         // === Іконки TG/Viber у нижньому блоку "Зв'язок з нами" ===
         var darkBox = document.querySelector('.elementor-element-ac75887 .elementor-icon-box-content');
         if (darkBox) {
@@ -222,4 +190,29 @@ add_filter('wpseo_breadcrumb_links', function($links) {
         array_splice($links, 1, 0, [$service_link]);
     }
     return $links;
+});
+
+// Footer per language: UK=77, RU=1957
+add_filter('elementor/theme/get_location_templates/footer', function($templates) {
+    $is_ru = function_exists('pll_current_language') && pll_current_language() === 'ru';
+    $keep_id = $is_ru ? 1957 : 77;
+    $result = [];
+    foreach ($templates as $key => $tpl) {
+        if (isset($tpl['id']) && (int)$tpl['id'] === $keep_id) {
+            $result[$key] = $tpl;
+        }
+    }
+    return !empty($result) ? $result : $templates;
+});
+
+// Показувати footer залежно від мови Polylang
+add_action('elementor/theme/before_do_footer', function() {
+    $lang = function_exists('pll_current_language') ? pll_current_language() : 'uk';
+    if ($lang === 'ru') {
+        // На російській — ховаємо український футер (ID 77)
+        echo '<style>.elementor-77 { display: none !important; }</style>';
+    } else {
+        // На українській — ховаємо російський футер (ID 1957)
+        echo '<style>.elementor-1957 { display: none !important; }</style>';
+    }
 });

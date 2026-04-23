@@ -132,3 +132,121 @@ border-color: #cf2e2e!important;
     color: #595959;
     pointer-events: none;
 }
+
+/* Language switcher label */
+.cpel-lang-label {
+    font-size: 13px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+/* === 404 Page === */
+.acs-404-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+.acs-404-inner { max-width: 600px; }
+.acs-404-code {
+    font-family: "Montserrat", sans-serif;
+    font-size: 140px;
+    font-weight: 800;
+    color: #F02801;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.acs-404-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1E1E1E;
+    margin-bottom: 15px;
+}
+.acs-404-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.acs-404-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.acs-404-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+.acs-404-btn-primary {
+    background: #F02801;
+    color: #fff;
+}
+.acs-404-btn-primary:hover { background: #1E1E1E; color: #fff; }
+.acs-404-btn-secondary {
+    background: #1E1E1E;
+    color: #fff;
+}
+.acs-404-btn-secondary:hover { background: #F02801; color: #fff; }
+.acs-404-contact { color: #999; font-size: 14px; }
+.acs-404-contact a { color: #F02801; font-weight: 600; text-decoration: none; font-size: 18px; }
+.acs-404-contact a:hover { color: #1E1E1E; }
+
+/* === Thank You Page === */
+.acs-thanks-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+.acs-thanks-inner { max-width: 600px; }
+.acs-thanks-icon {
+    font-size: 80px;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+.acs-thanks-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1E1E1E;
+    margin-bottom: 15px;
+}
+.acs-thanks-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.acs-thanks-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #F02801;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+.acs-thanks-btn:hover { background: #1E1E1E; color: #fff; }
+@media(max-width:767px) {
+    .acs-404-code { font-size: 100px; }
+    .acs-404-title, .acs-thanks-title { font-size: 22px; }
+}
